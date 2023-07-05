@@ -11,6 +11,6 @@ jobs:
       - uses: actions/checkout@v3
       - uses: sshnaidm/gpt-code-review-action
         with:
-          openai-key: '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'
+          openai-key: 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
           # Post comment with text even if step failed
           post-if-error: 'true'
