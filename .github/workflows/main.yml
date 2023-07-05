@@ -12,7 +12,7 @@ jobs:
   GPT-CODE-REVIEW:
     runs-on: ubuntu-latest
     steps:
-      - uses: anc95/ChatGPT-CodeReview@main
+    - uses: anc95/ChatGPT-CodeReview@main
         env:
           OPENAI_API_KEY: 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
           GITHUB_TOKEN: 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
