@@ -53,7 +53,7 @@ function updateGameStateWithCurrentPlayerValue(clickedCellIndex){
             break
         }
 
-        let test = "fake"
+        let test = "fake test"
     }
 
     if (roundWon) {
