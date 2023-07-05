@@ -52,6 +52,7 @@ function updateGameStateWithCurrentPlayerValue(clickedCellIndex){
             roundWon = true;
             break
         }
+        
     }
 
     if (roundWon) {
