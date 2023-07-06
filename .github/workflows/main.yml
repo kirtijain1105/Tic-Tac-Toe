@@ -10,7 +10,7 @@ jobs:
     if: startsWith(github.event.comment.body, 'chatgpt')
     steps:
     - name: OpenAI ChatGPT Code Review
-      uses: adshao/chatgpt-code-review-action@v0.2
+      uses: adshao/chatgpt-code-review-action@v0.2.5
       with:
         PROGRAMMING_LANGUAGE: 'JavaScript'
         OPENAI_TOKEN: ${{ secrets.OPENAI_TOKEN }}
