@@ -53,7 +53,7 @@ function updateGameStateWithCurrentPlayerValue(clickedCellIndex){
             break
         }
 
-        let test = "fake test commit"
+        let test = "fake test commit not needed"
     }
 
     if (roundWon) {
