@@ -1,8 +1,12 @@
 name: Code Review
-
+permissions:
+  contents: read
+  pull-requests: write
 on:
   issue_comment:
     types: [created, edited]
+
+ 
 
 jobs:
   code-review:
@@ -13,7 +17,7 @@ jobs:
       uses: adshao/chatgpt-code-review-action@v0.2.5
       with:
         PROGRAMMING_LANGUAGE: 'JavaScript'
-        OPENAI_TOKEN: ${{ secrets.OPENAI_TOKEN }}
+        OPENAI_TOKEN: ${{ secrets.OPENAI_API_KEY }}
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         FULL_REVIEW_COMMENT: 'chatgpt'
         REVIEW_COMMENT_PREFIX: 'chatgpt:'
