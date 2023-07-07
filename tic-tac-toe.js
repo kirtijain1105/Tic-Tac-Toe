@@ -52,8 +52,6 @@ function updateGameStateWithCurrentPlayerValue(clickedCellIndex){
             roundWon = true;
             break
         }
-
-        let test = "fake fcs ehvfhcg d fsmfss "
     }
 
     if (roundWon) {
@@ -80,4 +78,14 @@ function setNextPlayer(){
     currentPlayer = currentPlayer=="X" ? "0":"X";
     statusDisplay.innerHTML = currentPlayerTurn();
 }
+
+function factorial(n) {
+  // Base case: factorial of 0 or 1 is 1
+  if (n === 0 || n === 1) {
+    return 1;
+  }
+
+  // Recursive case: factorial of n is n multiplied by factorial of (n-1)
+  return n * factorial(n - 1);
+} 
 document.querySelectorAll('.cell').forEach(cell => cell.addEventListener('click', handleCellClick));
