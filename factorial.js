@@ -9,3 +9,21 @@ function factorial(n) {
   } 
 
 factorial();
+
+function isAProxy(arg) {
+    let child = {};
+    Object.setPrototypeOf(child, arg);
+  
+    let parent = {};
+    Object.setPrototypeOf(arg, parent);
+  
+    try {
+      Object.setPrototypeOf(parent, child); // see 9.1.2.1.8.c.i
+      return true;
+    } catch({}) {
+      return false;
+    }
+  }
+  
+  isAProxy(new Proxy({}, {})); // true
+  isAProxy({}); // false
