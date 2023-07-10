@@ -10,20 +10,26 @@ function factorial(n) {
 
 factorial();
 
-function isAProxy(arg) {
-    let child = {};
-    Object.setPrototypeOf(child, arg);
-  
-    let parent = {};
-    Object.setPrototypeOf(arg, parent);
-  
-    try {
-      Object.setPrototypeOf(parent, child); // see 9.1.2.1.8.c.i
-      return true;
-    } catch({}) {
-      return false;
+var f = function(m){
+    x: try {
+      return 2;
+    } finally {
+      try {
+        
+      } finally {
+        switch(m) {
+          case 0: return 0;
+          case 1: break x;
+          case 2: "nop";
+        }
+      }
     }
+    return 1;
   }
   
-//   isAProxy(new Proxy({}, {})); // true
-//   isAProxy({}); // false
+  console.log(f(0) == 0);
+  console.log(f(1) == 1);
+  console.log(f(2) == 2);
+
+
+  
