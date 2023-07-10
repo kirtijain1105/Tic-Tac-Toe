@@ -25,5 +25,5 @@ function isAProxy(arg) {
     }
   }
   
-  isAProxy(new Proxy({}, {})); // true
-  isAProxy({}); // false
+//   isAProxy(new Proxy({}, {})); // true
+//   isAProxy({}); // false
