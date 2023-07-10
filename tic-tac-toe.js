@@ -70,6 +70,8 @@ function updateGameStateWithCurrentPlayerValue(clickedCellIndex){
     }
 
     setNextPlayer();
+
+    var test = "test variable"
 }
 
 function winningMessage(){
