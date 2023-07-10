@@ -3,12 +3,8 @@ permissions:
   contents: read
   pull-requests: write
 on:
-  issue_comment:
-    types: [created, edited]
-  pull_request_review:
-    types: [edited, dismissed]
-  pull_request_review_comment:
-    types: [created, deleted]
+  pull_request:
+    types: [opened, reopened, synchronize]
 
  
 
